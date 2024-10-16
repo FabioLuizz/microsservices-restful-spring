@@ -4,6 +4,7 @@ services:
     image: fabio1934/spring-fiap:1.0
     container_name: meu-app
     environment:
+      - SPRING_PROFILES_ACTIVE=prd
       - DATABASE_URL=jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL
       - DATABASE_USER=rm551136
       - DATABASE_PWD=270400
