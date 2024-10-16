@@ -1,0 +1,19 @@
+version: '3'
+services:
+  trash-management-app:
+    image: fabio1934/spring-fiap:1.0
+    container_name: meu-app
+    environment:
+      - SPRING_PROFILES_ACTIVE=prd
+      - DATABASE_URL=jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL
+      - DATABASE_USER=rm551136
+      - DATABASE_PWD=270400
+    ports:
+      - "8080:8080"
+
+  oracle-db:
+    image: oracleinanutshell/oracle-xe-11g
+    environment:
+      - ORACLE_PWD=270400
+    ports:
+      - "1521:1521"
