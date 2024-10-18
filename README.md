@@ -44,19 +44,34 @@ Foram utilizadas, ferramentas do Spring, Java como tecnologia principal e Docker
 
 ### Como Testar:
 
-1. Faça o download ou clone o repositório do projeto.
+1. Faça o download ou clone o repositório do projeto e instale as dependencias necessarias para execução do projeto.
 
-2. Caso queira somente ter a aplicação através da imagem Docker para finalidade de teste, execute o comando abaixo para criar e iniciar um contêiner da a aplicação:
+   ```
+   mvn install
+   ```
+
+3. Caso queira somente ter a aplicação através da imagem Docker para finalidade de teste, execute o comando abaixo para criar e iniciar um contêiner da a aplicação:
 
    ```
    docker container run --name meu-app -d -p 8080:8080 fabio1934/spring-fiap:1.0
    ```
 
-3. Importe o arquivo Insomnia que está na raiz do projeto para ter acesso aos endpoints e testá-los.
+   - **Porta**: A aplicação será exposta na porta 8080 (acesse em http://localhost:8080) com o container já em execução.
 
-4. Comece pelo gerenciamento de usuários, realizando o registro e login conforme descrito na documentação.
+4. Importe o arquivo Insomnia que está na raiz do projeto para ter acesso aos endpoints e testá-los.
 
-5. Após o login, obtenha o Token de acesso Bearer para utilizar nos demais métodos disponíveis.
+5. Comece pelo gerenciamento de usuários, realizando o registro e login conforme descrito na documentação.
 
+6. Após o login, obtenha o Token de acesso Bearer para utilizar nos demais métodos disponíveis.
+
+
+
+### Deploy azure:
+
+O projeto está atualmente em execução no Azure. Para acessar a API, utilize o arquivo Insomnia que está disponível na raiz do projeto. Esse arquivo contém todas as rotas necessárias para interagir com a aplicação.
+
+Após importar, você precisará alterar o endereço da requisição para apontar para a rota do Azure onde o projeto está rodando.
+
+**Rota**:  https://trash-management-application-awh6hggdb8hhate5.eastus2-01.azurewebsites.net/
 
 
