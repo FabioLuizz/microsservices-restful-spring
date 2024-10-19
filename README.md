@@ -50,19 +50,27 @@ Foram utilizadas, ferramentas do Spring, Java como tecnologia principal e Docker
    mvn install
    ```
 
-3. Caso queira somente ter a aplicação através da imagem Docker para finalidade de teste, execute o comando abaixo para criar e iniciar um contêiner da a aplicação:
+3. Caso prefira rodar a aplicação utilizando Docker, execute o comando abaixo para criar e iniciar um contêiner da aplicação:
 
    ```
    docker container run --name meu-app -d -p 8080:8080 fabio1934/spring-fiap:1.0
    ```
 
+   Caso você esteja com o projeto clonado na sua maquina, atráves da sua IDE com o projeto aberto você também pode executar
+   a aplicaçâo utilizando docker com o seguinte comando:
+
+   ```
+   docker compose up --build
+   ```
+
    - **Porta**: A aplicação será exposta na porta 8080 (acesse em http://localhost:8080) com o container já em execução.
+     
 
-4. Importe o arquivo Insomnia que está na raiz do projeto para ter acesso aos endpoints e testá-los.
+5. Importe o arquivo Insomnia que está na raiz do projeto para ter acesso aos endpoints e testá-los.
 
-5. Comece pelo gerenciamento de usuários, realizando o registro e login conforme descrito na documentação.
+6. Comece pelo gerenciamento de usuários, realizando o registro e login conforme descrito na documentação.
 
-6. Após o login, obtenha o Token de acesso Bearer para utilizar nos demais métodos disponíveis.
+7. Após o login, obtenha o Token de acesso Bearer para utilizar nos demais métodos disponíveis.
 
 
 
