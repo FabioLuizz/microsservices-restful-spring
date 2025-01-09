@@ -5,7 +5,7 @@ services:
     ports:
       - "1521:1521"
     environment:
-      - ORACLE_PWD=270400
+      - ORACLE_PWD=020604
 
   api:
     build: .
@@ -14,5 +14,5 @@ services:
     environment:
       - SPRING_PROFILES_ACTIVE=prd
       - DATABASE_URL=jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL
-      - DATABASE_USER=rm551136
-      - DATABASE_PWD=270400
+      - DATABASE_USER=rm552362
+      - DATABASE_PWD=020604
